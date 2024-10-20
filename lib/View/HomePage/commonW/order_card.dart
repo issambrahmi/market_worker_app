@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:market_app_worker/Core/Colors/app_colors.dart';
 import 'package:market_app_worker/Core/SharedWidgets/app_button.dart';
-import 'package:market_app_worker/View/HomePage/commonW/tracking_order.dart';
+import 'package:market_app_worker/View/Order%20Detailles%20Page/order_detailles_page.dart';
 
 class OrderCard extends StatelessWidget {
   const OrderCard({super.key});
@@ -11,7 +12,6 @@ class OrderCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      //height: 200.h,
       padding: EdgeInsets.all(20.sp),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
@@ -20,8 +20,6 @@ class OrderCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const TrackingOrder(),
-          SizedBox(height: 15.h),
           Row(
             children: [
               Text(
@@ -30,7 +28,7 @@ class OrderCard extends StatelessWidget {
               ),
               SizedBox(width: 5.w),
               Text(
-                'W35THW: ',
+                'W35THW',
                 style: TextStyle(
                   fontSize: 14.sp,
                   fontWeight: FontWeight.w500,
@@ -44,24 +42,24 @@ class OrderCard extends StatelessWidget {
             'Mar 21, 1.25Pm',
             style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.bold),
           ),
-          // SizedBox(height: 5.h),
-          // Row(
-          //   children: [
-          //     Text(
-          //       'Items : ',
-          //       style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.bold),
-          //     ),
-          //     SizedBox(width: 5.w),
-          //     Text(
-          //       '27',
-          //       style: TextStyle(
-          //         fontSize: 14.sp,
-          //         fontWeight: FontWeight.w500,
-          //         color: Colors.grey.shade700,
-          //       ),
-          //     ),
-          //   ],
-          // ),
+          SizedBox(height: 5.h),
+          Row(
+            children: [
+              Text(
+                'Items : ',
+                style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(width: 5.w),
+              Text(
+                '27',
+                style: TextStyle(
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.grey.shade700,
+                ),
+              ),
+            ],
+          ),
           SizedBox(height: 5.h),
           Row(
             children: [
@@ -86,10 +84,10 @@ class OrderCard extends StatelessWidget {
             height: 40.h,
             width: double.infinity,
             textSize: 15.sp,
-            gradient: LinearGradient(
+            gradient: const LinearGradient(
                 colors: [AppColor.darkBlue, AppColor.greencolor]),
             onTap: () {
-              //Get.to(() => const OrderDetailesPage());
+              Get.to(() => const OrderDetailesPage());
             },
           )
         ],

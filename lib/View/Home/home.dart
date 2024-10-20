@@ -12,7 +12,6 @@ class Home extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       bottomNavigationBar: const AppBottomBar(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: GetBuilder<HomeController>(builder: (controller) {
         return controller.currentPage;
       }),

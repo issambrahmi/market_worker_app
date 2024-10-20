@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/instance_manager.dart';
+import 'package:market_app_worker/Controller/home_controller.dart';
+import 'package:market_app_worker/Controller/home_page_controller.dart';
 import 'package:market_app_worker/View/HomePage/commonW/orders_view.dart';
 import 'package:market_app_worker/View/HomePage/commonW/top_section_homepage.dart';
 
@@ -8,8 +11,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Get.put(HomePageController());
     return Scaffold(
-      body:SafeArea(
+      body: SafeArea(
           child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.w),
         child: Column(

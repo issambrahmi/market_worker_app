@@ -15,7 +15,7 @@ class TopSectionHomepage extends StatelessWidget {
       height: 40.h,
       width: double.infinity,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(15),
         color: AppColor.mainScreencolor,
       ),
       child: GetBuilder<HomePageController>(builder: (controller) {
@@ -31,7 +31,7 @@ class TopSectionHomepage extends StatelessWidget {
                 height: double.infinity,
                 width: 120.w,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(15),
                     gradient: LinearGradient(colors: [
                       AppColor.darkBlue.withOpacity(0.8),
                       AppColor.greencolor.withOpacity(
